@@ -1,0 +1,14 @@
+@keyframes example {
+  from {width:0%;}
+  to {width:100$}
+}
+.CustomLeft {
+  width: 0;
+}
+.CustomLeft.active {
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: none;
+  transition: 2s all ease-in-out;
+}
