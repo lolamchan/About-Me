@@ -8,7 +8,7 @@
 .CustomLeft.active {
   position: relative;
   animation-name: example;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: none;
   transition: 2s all ease-in-out;
 }
