@@ -2,11 +2,13 @@ function Customload() {
   var reveals = document.querySelectorAll(".CustomLeft");
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
+    var screenHeight = screen.height;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0; /*this is for preloading, still experimenting*/
-    if (elementTop < windowHeight - elementVisible) {
+    var elementBottom = reveals[i].getBoundingClientRect().bottom;
+    var offset = 50;
+    if (elementTop < windowHeight + offset && elementBottom > windowHeight - screenHeight - offset) {
       reveals[i].classList.add("active");
-    } else if (elementTop > windowHeight){
+    } else {
       reveals[i].classList.remove("active");
     }
   }
