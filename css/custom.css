@@ -1,4 +1,4 @@
-@keyframes example {
+@keyframes Fillin {
   from {width:0%;}
   to {width:100$}
 }
@@ -7,8 +7,22 @@
 }
 .CustomLeft.active {
   position: relative;
-  animation-name: example;
+  animation-name: Fillin;
   animation-duration: 2s;
   animation-fill-mode: none;
   transition: 2s all ease-in-out;
+}
+@keyframes Zoomup {
+  0%   {bottom: -200px; opacity: 0%;}
+  100% {bottom: 0px; opacity: 100%;}
+}
+.CustomUp {
+  opacity: 0;
+}
+.CustomUp.active {
+  position: relative;
+  animation-name: Zoomup;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: all ease-out;
 }
