@@ -19,15 +19,38 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.container::-webkit-scrollbar { 
+/* Remove ScrollBars */
+.byescrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.byescrollbar::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+/*cool carousel*/
+.swiper {
+    width:1000px;
+    height:350px;
+    margin-top:2%;
+    margin-left: auto;
+    margin-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    text-align: left;
+    height: auto;
+    width: 500px;
+    font-size: 18px;
+    background: #fff;
 }
 </style>
 </head>
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center container">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center byescrollbar">
   <!-- Avatar image in top left corner -->
   <a href="./index.html"><img src="media/angry-cat-furious-cat.gif" alt="Angry Cat" style="width:100%"></a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
@@ -177,55 +200,120 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <h2 class="w3-text-light-grey">My Blogs</h2>
   <hr style="width:200px" class="w3-opacity">
   <!-- Blog entries -->
-  <div class="w3-row-padding" style="margin:0 -16px">
-    <div class="w3-half">
+      
 
-    <!-- Blog entry -->
-    <div class="w3-card-4 w3-margin w3-white w3-opacity w3-hover-opacity-off">
-      <img src="media/blog2.png" alt="My official website" style="width:100%">
-      <div class="w3-container">
-        <h3><b>Publishing of my official website</b></h3>
-        <h5>Which is this website, <span class="w3-opacity">July 11, 2022</span></h5>
-      </div>
 
-    <div class="w3-container">
-      <p>After the great success of my first project. I've started actually writing a website. After a day of work, I've create the frame work of my website.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border w3-disabled"><b>READ MORE »</b></button></p>
+
+
+  <div class="w3-padding-64 w3-content" id="blog">
+  <h2 class="w3-text-light-grey">My Blogs</h2>
+  <hr style="width:200px" class="w3-opacity">
+  <!-- Blog entries -->
+  <!-- Swiper -->
+  <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-pointer-events" style="Height: 500px; width: 100%; margin:0 -16px;">
+    <div class="swiper-wrapper" id="swiper-wrapper-b8391332e6dae7f9" aria-live="polite">
+      <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off byescrollbar" role="group" aria-label="1 / 9" style="overflow:scroll;">   <!-- TEMP FIX, WAITING FOR HOVER SHOW IMAGE -->
+        <img src="./media/blog2.png" alt="My official website" style="width: 100%;"> 
+        <div class="w3-container">
+          <h3><b>Publishing of my official website</b></h3>
+          <h5>Which is this website, <span class="w3-opacity">July 11, 2022</span></h5>
         </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</div>
-<div class="w3-half">
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white w3-opacity w3-hover-opacity-off">
-  <img src="media/blog1.png" alt="My first website" style="width:100%">
-    <div class="w3-container">
-      <h3><b>My First Website</b></h3>
-      <h5>The day everything started, <span class="w3-opacity">July 10, 2022</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>My first <a href="https://lolamchan.github.io/About-Me/">website</a> is created on that day. I'm quite proud of it despite over 90% of it is from a template.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border w3-disabled"><b>READ MORE »</b></button></p>
+        <div class="w3-container" style="height:20%;">
+          <p style="font-size: 15px;">After the great success of my first project. I've started actually writing a website. After a day of work, I've create the frame work of my website.</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border w3-disabled"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off byescrollbar" role="group" aria-label="2 / 9" style="overflow:scroll;"> <!-- TEMP FIX, WAITING FOR HOVER SHOW IMAGE -->
+      <img src="media/blog1.png" alt="My first website" style="width:100%;">   
+        <div class="w3-container">
+          <h3><b>My First Website</b></h3>
+          <h5>The day everything started, <span class="w3-opacity">July 10, 2022</span></h5>
+        </div>
+          <div class="w3-container" style="height:20%;">
+            <p style="font-size: 15px;">My first <a href="https://lolamchan.github.io/About-Me/">website</a> is created on that day. I'm quite proud of it despite over 90% of it is from a template.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border w3-disabled"><b>READ MORE »</b></button></p>
+              </div>
+              <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="3 / 9">Placeholder 3</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="4 / 9">Placeholder 4</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="5 / 9">Placeholder 5</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="6 / 9">Placeholder 6</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="7 / 9">Placeholder 7</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="8 / 9">Placeholder 8</div>
+    <div class="swiper-slide w3-card-4 w3-white w3-opacity w3-hover-opacity-off" role="group" aria-label="9 / 9">Placeholder 9</div>
+    </div>
+    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-b8391332e6dae7f9" aria-disabled="false"></div>
+    <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-b8391332e6dae7f9" aria-disabled="false"></div>
+
+
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span>
+      <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: "auto",
+        grabCursor: true,
+        slideToClickedSlide: true,
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 10,
+          depth: 200,
+          modifier: 1,
+          scale: 0.5,
+          slideShadows: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: false,    /*temp disabled for large blogs*/
+        keyboard: true,
+      });
+    </script>
+
+
+      
+  
+      
 <!-- END BLOG ENTRIES -->
 
 
-</div>
+  </div>
 
 
 
