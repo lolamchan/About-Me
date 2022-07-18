@@ -3,18 +3,13 @@
 <head>
 <title>My Handsome Website</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<meta http-equiv="cache-control" content="no-cache" />               <!-- I HAVE NO GOD DAMN     -->
-<meta http-equiv="Pragma" content="no-cache" />                      <!-- CLUE WHY IT WORKS WITH -->
-<meta http-equiv="Expires" content="-1" />                           <!-- THESE THREE LINE       -->
-                                                                     <!-- Probably some cache memeory is breaking my website?!?!?! -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <link rel="stylesheet" href="./css/custom.css">
-<!-- My Own Script -->
-<script src="./js/CustomLoad.js" async></script>
+
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -226,9 +221,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <div class="w3-col m8 s12">
               <p><button class="w3-button w3-padding-large w3-white w3-border w3-disabled"><b>READ MORE »</b></button></p>
             </div>
-            <div class="w3-col m4 w3-hide-small">
+<!--       comment            <div class="w3-col m4 w3-hide-small">
               <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -244,9 +239,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <div class="w3-col m8 s12">
               <p><button class="w3-button w3-padding-large w3-white w3-border w3-disabled"><b>READ MORE »</b></button></p>
             </div>
-            <div class="w3-col m4 w3-hide-small">
+<!--       comment     <div class="w3-col m4 w3-hide-small">
               <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-            </div>
+            </div>   -->
           </div>
         </div>
       </div>
@@ -273,37 +268,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
       <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        effect: "coverflow",
-        centeredSlides: true,
-        slidesPerView: "auto",
-        grabCursor: true,
-        slideToClickedSlide: true,
-        coverflowEffect: {
-          rotate: 20,
-          stretch: 10,
-          depth: 200,
-          modifier: 1,
-          scale: 0.5,
-          slideShadows: false,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        mousewheel: false,    /*temp disabled for large blogs*/
-        keyboard: true,
-      });
-    </script>
 
 
       
@@ -346,7 +311,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h2 class="w3-text-light-grey">Countdown</h2>
     <hr style="width:200px" class="w3-opacity">
     <p class="w3-jumbo w3-center" id="demo"></p>
-    <script src="js/Countdown.js">    </script>
   <!-- End Countdown Section -->
   </div>
     <!-- Footer -->
@@ -363,8 +327,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </footer>
 
 <!-- END PAGE CONTENT -->
-</div>
 
+</div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 10,
+          depth: 200,
+          modifier: 1,
+          scale: 0.5,
+          slideShadows: false,
+        },
+        centeredSlides: true,
+        slidesPerView: "auto",
+        grabCursor: true,
+        slideToClickedSlide: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: false,    /*temp disabled for large blogs*/
+        keyboard: true,
+      });
+
+    </script>
+<!-- My Own Script -->
+<script src="js/CustomLoad.js"></script>
+<!-- Countdown script -->
+<script src="js/Countdown.js">    </script>
     
 
 </body>
